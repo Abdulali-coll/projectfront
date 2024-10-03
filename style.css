@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --dark-green: hsl(150, 40%, 25%);
-    --pale-cream: hsl(35, 50%, 98%);
-    --midnight: hsl(220, 35%, 20%);
-    --slate-gray: hsl(230, 15%, 45%);
-    --snow-white: hsl(0, 0%, 100%);
+    --Teal: hsl(160, 50%, 30%);
+    --Light-beige: hsl(30, 50%, 95%);
+    --Navy-blue: hsl(210, 30%, 15%);
+    --Steel-blue: hsl(220, 20%, 40%);
+    --Pure-white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -20,135 +20,135 @@ html {
 }
 
 body {
-    background-color: var(--pale-cream);
-    font-size: 18px;
+    background-color: var(--Light-beige);
 }
 
-.container {
+.wrapper {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.box {
-    background-color: var(--snow-white);
-    width: 680px;
-    height: 480px;
-    border-radius: 1rem;
+.card {
+    background-color: var(--Pure-white);
+    width: 700px;
+    height: 500px;
+    border-radius: 1.5rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.box__image {
+.card__image {
     background-image: url(images/image-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.box__content {
+.card__info {
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.box__category {
+.card__label {
     font-size: 14px;
-    color: var(--slate-gray);
-    letter-spacing: 0.1rem;
+    color: var(--Steel-blue);
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.box__headline {
+.card__title {
     font-size: 36px;
     font-family: 'Fraunces', serif;
-    color: var(--midnight);
+    color: var(--Navy-blue);
 }
 
-.box__text {
+.card__description {
     font-size: 14px;
-    color: var(--slate-gray);
+    color: var(--Steel-blue);
 }
 
-.box__pricing-section {
+.card__pricing {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
-.box__current-price {
+.card__price {
     font-size: 36px;
     font-family: 'Fraunces', serif;
-    color: var(--dark-green);
+    color: var(--Teal);
 }
 
-.box__old-price {
+.card__price-old {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    color: var(--slate-gray);
+    color: var(--Steel-blue);
     text-decoration: line-through;
 }
 
-.box__cta {
-    width: 230px;
-    height: 40px;
+.card__button {
+    width: 240px;
+    height: 45px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    background-color: var(--dark-green);
-    color: var(--snow-white);
+    background-color: var(--Teal);
+    color: var(--Pure-white);
     transition: background-color 0.3s;
 }
 
-.box__cta:hover {
-    background-color: var(--midnight);
+.card__button:hover {
+    background-color: var(--Navy-blue);
 }
 
-@media (max-width: 780px) {
-    .box {
-        width: 430px;
-        height: 550px;
+@media (max-width: 800px) {
+    .card {
+        width: 450px;
+        height: 600px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1.2fr 1.3fr;
+        grid-template-rows: 1fr 1.5fr;
     }
-    .box__content {
+    .card__info {
         padding: 20px;
     }
-    .box__image {
+    .card__image {
         background-image: url(images/image-mobile.jpg);
     }
 }
 
-@media (max-width: 530px) {
-    .box {
-        width: 310px;
-        height: 500px;
+@media (max-width: 540px) {
+    .card {
+        width: 320px;
+        height: 550px;
     }
-    .box__headline {
+    .card__title {
         font-size: 32px;
     }
-    .box__text {
+    .card__description {
         font-size: 12px;
     }
-    .box__current-price {
+    .card__price {
         font-size: 32px;
     }
-    .box__old-price {
+    .card__price-old {
         font-size: 12px;
     }
-    .box__cta {
-        width: 200px;
+    .card__button {
+        width: 210px;
     }
 }
 
-@media (max-width: 330px) {
-    .box {
-        width: 250px;
-        height: 460px;
+@media (max-width: 340px) {
+    .card {
+        width: 260px;
+        height: 480px;
     }
 }
